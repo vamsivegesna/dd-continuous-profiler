@@ -12,11 +12,14 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         ActorSystem system = ActorSystem.create("performanceIssueSystem");
 
-        ActorRef slowActor = system.actorOf(Props.create(SlowActor.class), "slowActor");
+//        ActorRef slowActor = system.actorOf(Props.create(SlowActor.class), "slowActor");
+
+        ActorRef myActor = system.actorOf(Props.create(MyActor.class), "MyActor");
+
 
         // Send multiple messages to the SlowActor
         for (int i = 0; i < 1000; i++) {
-            slowActor.tell("Message " + i, ActorRef.noSender());
+            myActor.tell("Message " + i, ActorRef.noSender());
         }
 
         // Allow some time for processing
