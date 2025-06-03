@@ -20,6 +20,12 @@
             <artifactId>pekko-actor_3</artifactId>
             <version>1.0.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.reactivex</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>1.2.1</version>
+        </dependency>
     </dependencies>
 
 </project>
