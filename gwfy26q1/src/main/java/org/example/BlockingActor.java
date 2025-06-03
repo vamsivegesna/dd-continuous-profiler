@@ -14,7 +14,7 @@ public class BlockingActor extends AbstractActor {
         return receiveBuilder()
                 .match(Integer.class, i -> {
                     try {
-                        Thread.sleep(5000); // Simulates a blocking operation
+                        Thread.sleep(1000); // Simulates a blocking operation
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
